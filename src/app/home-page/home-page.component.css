@@ -1,7 +1,5 @@
 .mainFrame {
   width: 100%;
-  height: 1538px;
-  border-style: solid;
 }
 .headerFrame {
   width: 90%;
@@ -10,5 +8,4 @@
 .bodyFrame {
   width: 90%;
   height: 80%;
-  border-style: solid;
 }
