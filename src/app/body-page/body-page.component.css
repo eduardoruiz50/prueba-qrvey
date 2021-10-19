@@ -1,0 +1,44 @@
+.headers {
+  width: 90%;
+  display: flex;
+}
+.content {
+  width: 90%;
+  display: block;
+  margin-bottom: 15px;
+}
+.headerColumn {
+  width: 17%;
+  text-align: left;
+  margin-left: 2%;
+  margin-bottom: 20px;
+}
+.contentColumn {
+  width: 17%;
+  text-align: left;
+  margin-left: 20px;
+}
+.tableFrame {
+  width: 100%;
+}
+.countryText {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 12px;
+  line-height: 14px;
+  margin-left: 7px;
+}
+.labelHeader {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  color: #09295e;
+}
+
+.contentBoard {
+  width: 100%;
+  display: flex;
+}

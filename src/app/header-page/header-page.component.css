@@ -1,0 +1,81 @@
+.picture {
+  /* Rectangle 300 */
+  width: 35%;
+  height: 90%;
+  background-image: url(../../assets/image.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0px 0px 0px 180px;
+  background-color: transparent;
+  padding-left: 26%;
+  z-index: -1;
+}
+.title {
+  width: 60%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 59px;
+  color: #09295e;
+  padding-top: 20%;
+  padding-left: 7%;
+}
+.searchBar {
+  display: flex;
+  width: 130%;
+  padding-left: 2%;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  margin-left: 7%;
+  margin-top: 3%;
+  z-index: 0;
+}
+
+.frameInt {
+  width: 100%;
+  height: 30%;
+  display: flex;
+}
+.leftBox {
+  width: 50%;
+}
+
+.countryLbl {
+  color: #21adcf;
+}
+
+.searchText {
+  width: 71%;
+  font-size: xx-large;
+  border: none;
+  outline: none;
+  margin-bottom: 2%;
+  padding-top: 2%;
+}
+
+.selectBox {
+  width: 18%;
+  font-size: xx-large;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.vl {
+  width: 2%;
+  border-left: 1px solid #e0e0e0;
+}
+.searchBtn {
+  width: 10%;
+  border-radius: 0% 15% 15% 0%;
+  background-color: #21adcf;
+  border: none;
+  background-image: url(../../assets/Vector.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}

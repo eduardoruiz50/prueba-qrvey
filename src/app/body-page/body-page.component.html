@@ -1,0 +1,72 @@
+
+<div class="tableFrame">
+    <div class="headers">
+        <div class="headerColumn">
+            <label class="labelHeader">Africa</label>
+        </div>
+        <div class="headerColumn">
+            <label class="labelHeader">America</label>
+        </div>
+        <div class="headerColumn">
+            <label class="labelHeader">Asia</label>
+        </div>
+        <div class="headerColumn">
+            <label class="labelHeader">Europa</label>
+        </div>
+        <div class="headerColumn">
+            <label class="labelHeader">Oceania</label>
+        </div>
+    </div>
+    <div class="contentBoard">
+        <div class="contentColumn">
+            <div class="content">
+                <ng-container *ngFor="let country of allcountries" >
+                    <div  *ngIf="country['region'] == 'Africa'"  class="dataColumn">
+                        <label>{{country['flag']}}</label>
+                        <label class="countryText">{{country['name']['common']}}</label>
+                    </div>            
+                </ng-container>            
+            </div>
+        </div>
+        <div class="contentColumn">
+            <div class="content">
+                <ng-container *ngFor="let country of allcountries" >
+                    <div  *ngIf="country['region'] == 'Americas'"  class="dataColumn">
+                        <label>{{country['flag']}}</label>
+                        <label class="countryText">{{country['name']['common']}}</label>
+                    </div>            
+                </ng-container>            
+            </div>
+        </div>
+        <div class="contentColumn">
+            <div class="content">
+                <ng-container *ngFor="let country of allcountries" >
+                    <div  *ngIf="country['region'] == 'Asia'"  class="dataColumn">
+                        <label>{{country['flag']}}</label>
+                        <label class="countryText">{{country['name']['common']}}</label>
+                    </div>            
+                </ng-container>            
+            </div>
+        </div>
+        <div class="contentColumn">
+            <div class="content">
+                <ng-container *ngFor="let country of allcountries" >
+                    <div  *ngIf="country['region'] == 'Europe'"  class="dataColumn">
+                        <label>{{country['flag']}}</label>
+                        <label class="countryText">{{country['name']['common']}}</label>
+                    </div>            
+                </ng-container>            
+            </div>
+        </div>
+        <div class="contentColumn">
+            <div class="content">
+                <ng-container *ngFor="let country of allcountries" >
+                    <div  *ngIf="country['region'] == 'Oceania'"  class="dataColumn">
+                        <label>{{country['flag']}}</label>
+                        <label class="countryText">{{country['name']['common']}}</label>
+                    </div>            
+                </ng-container>            
+            </div>
+        </div>
+    </div>
+</div>
