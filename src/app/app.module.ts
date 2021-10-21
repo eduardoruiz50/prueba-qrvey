@@ -7,18 +7,27 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HeaderPageComponent } from './header-page/header-page.component';
 import { BodyPageComponent } from './body-page/body-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CountryDialogComponent } from './country-dialog/country-dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     HeaderPageComponent,
-    BodyPageComponent
+    BodyPageComponent,
+    CountryDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    CountryDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

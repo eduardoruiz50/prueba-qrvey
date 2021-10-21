@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { CountryDialogComponent } from '../country-dialog/country-dialog.component';
 import { CountriesService } from '../services/countries.service';
 
 @Component({
@@ -7,14 +9,24 @@ import { CountriesService } from '../services/countries.service';
   styleUrls: ['./body-page.component.css']
 })
 export class BodyPageComponent implements OnInit {
-  allcountries = [];
-  constructor(private dataService: CountriesService) { }
+  @Input() countryFilter = '';
+  allcountries: any;
+  constructor(private dataService: CountriesService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.dataService.getcountries().subscribe((data: any) => {
-      console.log('listado paises', data);
-      this.allcountries = data;
-    })
+    this.dataService.getAllcountries(0);
+    this.dataService.currentCountryData.subscribe(countryData => (this.allcountries = countryData));
   }
 
+  openDialog(countryData: any): void {
+    const dialogRef = this.dialog.open(CountryDialogComponent, {
+      width: '450px',
+      height: '300px',
+      data: countryData
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }

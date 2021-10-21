@@ -6,13 +6,13 @@
             <label> in the world.</label>
         </div>
         <div class="searchBar">
-            <input class="searchText" type="text" placeholder="Search country">
+            <input class="searchText" #inputText type="text" placeholder="Search country">
             <div class="vl"></div>
-            <select class="selectBox" name="continents" id="continents">
+            <select class="selectBox" #selectOption name="continents" id="continents">
                 <option value="0">Show All</option>
                 <option *ngFor="let item of continents" value="{{item['id']}}">{{item['name']}}</option>
             </select>
-            <button class="searchBtn"></button>
+            <button class="searchBtn" (click)="searchCountry(inputText.value,selectOption.value)"></button>
         </div>
     </div>    
     <div class="picture"></div>

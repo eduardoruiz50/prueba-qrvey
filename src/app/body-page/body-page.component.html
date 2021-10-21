@@ -22,8 +22,10 @@
             <div class="content">
                 <ng-container *ngFor="let country of allcountries" >
                     <div  *ngIf="country['region'] == 'Africa'"  class="dataColumn">
-                        <label>{{country['flag']}}</label>
-                        <label class="countryText">{{country['name']['common']}}</label>
+                        <div (click)="openDialog(country)">
+                            <label>{{country['flag']}}</label>
+                            <label class="countryText">{{country['name']}}</label>
+                        </div>                        
                     </div>            
                 </ng-container>            
             </div>
@@ -32,8 +34,10 @@
             <div class="content">
                 <ng-container *ngFor="let country of allcountries" >
                     <div  *ngIf="country['region'] == 'Americas'"  class="dataColumn">
-                        <label>{{country['flag']}}</label>
-                        <label class="countryText">{{country['name']['common']}}</label>
+                        <div (click)="openDialog(country)">
+                            <label>{{country['flag']}}</label>
+                            <label class="countryText">{{country['name']}}</label>
+                        </div>
                     </div>            
                 </ng-container>            
             </div>
@@ -42,8 +46,10 @@
             <div class="content">
                 <ng-container *ngFor="let country of allcountries" >
                     <div  *ngIf="country['region'] == 'Asia'"  class="dataColumn">
-                        <label>{{country['flag']}}</label>
-                        <label class="countryText">{{country['name']['common']}}</label>
+                        <div (click)="openDialog(country)">
+                            <label>{{country['flag']}}</label>
+                            <label class="countryText">{{country['name']}}</label>
+                        </div>
                     </div>            
                 </ng-container>            
             </div>
@@ -52,8 +58,10 @@
             <div class="content">
                 <ng-container *ngFor="let country of allcountries" >
                     <div  *ngIf="country['region'] == 'Europe'"  class="dataColumn">
-                        <label>{{country['flag']}}</label>
-                        <label class="countryText">{{country['name']['common']}}</label>
+                        <div (click)="openDialog(country)">
+                            <label>{{country['flag']}}</label>
+                            <label class="countryText">{{country['name']}}</label>
+                        </div>
                     </div>            
                 </ng-container>            
             </div>
@@ -62,8 +70,10 @@
             <div class="content">
                 <ng-container *ngFor="let country of allcountries" >
                     <div  *ngIf="country['region'] == 'Oceania'"  class="dataColumn">
-                        <label>{{country['flag']}}</label>
-                        <label class="countryText">{{country['name']['common']}}</label>
+                        <div (click)="openDialog(country)">
+                            <label>{{country['flag']}}</label>
+                            <label class="countryText">{{country['name']}}</label>
+                        </div>
                     </div>            
                 </ng-container>            
             </div>

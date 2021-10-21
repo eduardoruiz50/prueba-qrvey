@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountriesService } from '../services/countries.service';
 
 @Component({
   selector: 'app-header-page',
@@ -7,14 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderPageComponent implements OnInit {
   continents = [
-    { id: 1, name: 'Africa' },
-    { id: 2, name: 'America' },
-    { id: 3, name: 'Asia' },
-    { id: 3, name: 'Europe' },
-    { id: 3, name: 'Oceania' }];
-  constructor() { }
+    { id: 'Africa', name: 'Africa' },
+    { id: 'Americas', name: 'America' },
+    { id: 'Asia', name: 'Asia' },
+    { id: 'Europe', name: 'Europa' },
+    { id: 'Oceania', name: 'Oceania' }];
+  constructor(private dataService: CountriesService) { }
 
   ngOnInit(): void {
+  }
+
+  searchCountry(searchText: string, optionValue: any) {
+    console.log('select option', optionValue)
+    if (searchText.length > 0)
+      this.dataService.searchCountries(searchText, optionValue);
+    else
+      this.dataService.getAllcountries(optionValue);
   }
 
 }
