@@ -35,30 +35,51 @@ export class CountriesService {
 
       this.allcountries = data.map(function (country, index, array) {
         let countryval: any;
-        //console.log('full country', country);
+        let currencyKey: any;
+        let languajeAux: any;
+        let bordersAux: any;
+        console.log('country', country);
+        if (country["currencies"]) {
+          currencyKey = Object.keys(country["currencies"])
+        }
+        else
+          currencyKey = '';
+
+        if (country["languages"]) {
+          languajeAux = Object.values(country["languages"]);
+        } else
+          languajeAux
+
+        if (country["borders"]) {
+          bordersAux = Object.values(country["borders"]);
+        } else
+          bordersAux
+
+        const aux = currencyKey[0];
+
         return countryval = {
           "name": country["name"]["common"],
           "region": country["region"],
           "flag": country["flag"],
+          "flagPic": country["flags"][0],
           "population": country["population"],
           "capital": country["capital"],
-          "currency": country["currencies"],
-          "language": country["languages"],
-          "borderCountries": country["borders"]
+          "currency": currencyKey !== '' ? country["currencies"][aux]["name"] : 'no currency',
+          "language": languajeAux !== '' ? languajeAux : 'no languages',
+          "borderCountries": bordersAux !== '' ? bordersAux : 'no borders'
         }
       });
 
       this.allcountries.sort((one: { name: string; }, two: { name: string; }) => (one.name < two.name ? -1 : 1));
-      console.log('continent', continent)
+
       if (continent != 0) {
         const valor = this.allcountries.filter((element: { region: string }) => element.region === continent)
         this.countryDataSource.next(valor);
       } else {
-        console.log('continent-->', continent);
+
         this.countryDataSource.next(this.allcountries);
       }
 
-      console.log("data:", this.allcountries)
     })
 
 

@@ -20,8 +20,8 @@ export class BodyPageComponent implements OnInit {
 
   openDialog(countryData: any): void {
     const dialogRef = this.dialog.open(CountryDialogComponent, {
-      width: '450px',
-      height: '300px',
+      width: '500px',
+      height: '450px',
       data: countryData
     });
 

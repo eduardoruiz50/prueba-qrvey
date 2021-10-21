@@ -5,6 +5,7 @@ export interface DialogData {
   name: string;
   region: string;
   flag: any;
+  flagPic: any;
   population: any;
   capital: string;
   currency: any;
